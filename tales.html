@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Exatas - Matematica</title>
+    <link rel="stylesheet" href="subpag/css/style3.css"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <header>
+      <div class="logo">Site de Exatas</div>
+      <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="matematica.html">Matematica</a></li>
+            <li><a href="fisica.html">Fisica</a></li>
+            <li><a href="quimica.html">Quimica</a></li>
+          </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="about-me">
+        <h1>Tales:</h1>
+        <p>O Teorema de Tales é um dos teoremas mais importantes da geometria, que relaciona as medidas de segmentos em retas paralelas. Ele afirma que se três ou mais retas paralelas cortam duas transversais, então as medidas dos segmentos dessas transversais são proporcionais. Por exemplo, considere as retas paralelas AB e CD e as transversais EF e GH, como na figura abaixo:</p>
+        <p>
+            A ------- B <br>
+            E ------- F <br>
+            G ------- H <br>
+            C ------- D <br>
+        </p>
+        <p>Se os segmentos EF e GH se intersectam, então o Teorema de Tales afirma que: EI/FI = GI/HI</p>
+        <p>Ou seja, a razão entre as medidas dos segmentos EI e FI é igual à razão entre as medidas dos segmentos GI e HI.
+
+            Esse teorema é muito utilizado em diversas áreas, como na resolução de problemas de geometria, em cálculos de proporções e escalas, em sistemas de medidas, entre outros.</p>
+      </section>
+      <iframe width="420" height="315"
+src="https://www.youtube.com/embed/VdNXnLfMp1A">
+</iframe>
+
+<h1>Exercicios:</h1>
+
+<div class="image-container"></div>
+<div class="arrow-container">
+  <span class="left-arrow">&larr;</span>
+  <span class="right-arrow">&rarr;</span>
+</div>
+
+<script>
+
+const imageContainer = document.querySelector('.image-container');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+let imageIndex = 1;
+
+leftArrow.addEventListener('click', function() {
+  imageIndex--;
+  if (imageIndex < 1) {
+    imageIndex = 1;
+  }
+  
+  imageContainer.style.backgroundImage = `url('subpag/css/img/test${imageIndex}.jpg')`;
+});
+
+rightArrow.addEventListener('click', function() {
+  imageIndex++;
+  if (imageIndex > 2) {
+    imageIndex = 2;
+  }
+  
+  imageContainer.style.backgroundImage = `url('subpag/css/img/test${imageIndex}.jpg')`;
+});
+
+</script>
+
+
+    </main>
+    <footer>
+      <div class="footer-logo">Site de Exatas</div>
+      <nav class="footer-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="matematica.html">Matematica</a></li>
+            <li><a href="fisica.html">Fisica</a></li>
+            <li><a href="quimica.html">Quimica</a></li>
+          </ul>
+      </nav>
+      <div class="footer-info">2023 Site de Exatas.</div>
+    </footer>
+  </body>
+</html>
