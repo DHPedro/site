@@ -72,13 +72,13 @@ function fatorarNumero() {
     var fatorizacao = document.getElementById("fatorizacao");
     fatorizacao.innerHTML = "";
 
-    fatorizacao.innerHTML += "<p>A fatoração de " + numero + " é:</p>";
+    fatorizacao.innerHTML += "<p>A fatoração de " + numero + " é:</p><br>";
     for (var i = 0; i < resultado.length; i++) {
         fatorizacao.innerHTML += "<p>" + numero + " | " + resultado[i] + "</p>";
         numero = Math.floor(numero / resultado[i]);
     }
 
-    fatorizacao.innerHTML += "<p>  1 | </p>";
+    fatorizacao.innerHTML += "<p>  1 | </p><br><br>";
 
     var fatorizacaoFinal = resultado.join(" x ");
     fatorizacao.innerHTML += "<p>" + fatorizacaoFinal + "</p>";
