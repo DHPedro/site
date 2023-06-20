@@ -50,7 +50,7 @@
         }
     </style>
     <script>
-       function fatoracao(numero) {
+function fatoracao(numero) {
     var fatores = [];
     var divisor = 2;
 
@@ -78,7 +78,9 @@ function fatorarNumero() {
         numero = Math.floor(numero / resultado[i]);
     }
 
-    var fatorizacaoFinal = resultado.join("x");
+    fatorizacao.innerHTML += "<p>  1 | </p>";
+
+    var fatorizacaoFinal = resultado.join(" x ");
     fatorizacao.innerHTML += "<p>" + fatorizacaoFinal + "</p>";
 }
 
