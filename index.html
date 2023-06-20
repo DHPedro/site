@@ -50,35 +50,38 @@
         }
     </style>
     <script>
-        function fatoracao(numero) {
-            var fatores = [];
-            var divisor = 2;
+       function fatoracao(numero) {
+    var fatores = [];
+    var divisor = 2;
 
-            while (numero > 1) {
-                if (numero % divisor === 0) {
-                    fatores.push(divisor);
-                    numero = numero / divisor;
-                } else {
-                    divisor += 1;
-                }
-            }
-
-            return fatores;
+    while (numero > 1) {
+        if (numero % divisor === 0) {
+            fatores.push(divisor);
+            numero = numero / divisor;
+        } else {
+            divisor += 1;
         }
+    }
 
-        function fatorarNumero() {
-            var numero = parseInt(document.getElementById("numero").value);
-            var resultado = fatoracao(numero);
-            var fatorizacao = document.getElementById("fatorizacao");
-            fatorizacao.innerHTML = "";
+    return fatores;
+}
 
-            fatorizacao.innerHTML += "<p>A fatoração de " + numero + " é:</p>";
-            for (var i = 0; i < resultado.length; i++) {
-                fatorizacao.innerHTML += "<p>" + resultado[i] + "</p>";
-            }
+function fatorarNumero() {
+    var numero = parseInt(document.getElementById("numero").value);
+    var resultado = fatoracao(numero);
+    var fatorizacao = document.getElementById("fatorizacao");
+    fatorizacao.innerHTML = "";
 
-            fatorizacao.innerHTML += "<p>1</p>";
-        }
+    fatorizacao.innerHTML += "<p>A fatoração de " + numero + " é:</p>";
+    for (var i = 0; i < resultado.length; i++) {
+        fatorizacao.innerHTML += "<p>" + numero + " | " + resultado[i] + "</p>";
+        numero = Math.floor(numero / resultado[i]);
+    }
+
+    var fatorizacaoFinal = resultado.join("x");
+    fatorizacao.innerHTML += "<p>" + fatorizacaoFinal + "</p>";
+}
+
     </script>
 </head>
 <body>
