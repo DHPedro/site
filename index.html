@@ -2,6 +2,53 @@
 <html>
 <head>
     <title>Fatoração de Números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-bottom: 50px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #numero {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        #fatorizacao {
+            margin: 20px auto;
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        #fatorizacao p {
+            margin: 5px 0;
+        }
+
+        #footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f5f5f5;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
     <script>
         function fatoracao(numero) {
             var fatores = [];
@@ -27,19 +74,21 @@
 
             fatorizacao.innerHTML += "<p>A fatoração de " + numero + " é:</p>";
             for (var i = 0; i < resultado.length; i++) {
-                fatorizacao.innerHTML += "<p>" + numero + " | " + resultado[i] + "</p>";
-                numero = Math.floor(numero / resultado[i]);
+                fatorizacao.innerHTML += "<p>" + resultado[i] + "</p>";
             }
 
-            fatorizacao.innerHTML += "<p>  1 | </p>";
+            fatorizacao.innerHTML += "<p>1</p>";
         }
     </script>
 </head>
 <body>
-    <h1>Site feito por dhpedro<h1>
+    <h1>Site feito por dhpedro</h1>
     <h1>Fatoração de Números</h1>
     <input type="text" id="numero" placeholder="Digite um número inteiro para fatorar">
     <button onclick="fatorarNumero()">Fatorar</button>
     <div id="fatorizacao"></div>
+    <div id="footer">
+        Desenvolvido por dhpedro &copy; 2023
+    </div>
 </body>
 </html>
